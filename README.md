@@ -1,4 +1,4 @@
-# Wanderwild | Premium Website Template
+# Wanderwild | Premium Travel Website Template
 
 <!-- README SHOWCASE START -->
 
