@@ -1,5 +1,24 @@
 # Wanderwild | Premium Website Template
 
+<!-- README SHOWCASE START -->
+
+<div align="center">
+
+[![Wanderwild website preview](https://image.thum.io/get/noanimate/width/1200/crop/850/maxAge/72/https://wanderwild-template.vercel.app/)](https://wanderwild-template.vercel.app/)
+
+**Travel magazine & journal**
+
+[**View Live Website (Vercel)**](https://wanderwild-template.vercel.app/) &nbsp;·&nbsp; [**GitHub Pages Demo**](https://mrpranavpatel.github.io/Wanderwild/) &nbsp;·&nbsp; [**Source Code**](https://github.com/MRPRANAVPATEL/Wanderwild)
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black) ![Responsive](https://img.shields.io/badge/Responsive-Design-297F67) ![Static Site](https://img.shields.io/badge/Deployment-Live-267d45)
+
+</div>
+
+*Preview is generated from the public Vercel website using Thum.io and may take a moment to appear or reflect recent changes.*
+
+<!-- README SHOWCASE END -->
+
+
 **Thoughtfully built by Pranav Patel.**
 
 Immersive travel magazine and travel blog website template using HTML, CSS and JavaScript.
