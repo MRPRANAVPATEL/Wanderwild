@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WANDERWILD — An Immersive Travel Journal</title>
+<meta name="description" content="An independent travel magazine: destinations, stories, photography and hidden places.">
+<link rel="icon" href="favicon2.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;600&family=Fraunces:ital,wght@0,400;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<div class="loader" id="loader" aria-hidden="true"><span class="disp">Wanderwild</span><b class="disp" id="count">0</b></div>
+<div class="cur" id="cur" aria-hidden="true"></div>
+
+<header class="bar">
+  <a class="logo disp" href="#top" aria-label="Wanderwild home">Wanderwild</a>
+  <nav id="nav" aria-label="Main">
+    <a href="#destinations">Destinations</a><a href="#stories">Stories</a><a href="#lens">Lens</a><a href="#mood">Mood</a><a href="#newsletter">Join</a>
+  </nav>
+  <button class="ico" id="sbtn" aria-label="Open search">Search</button>
+  <button class="ico menu" id="mbtn" aria-expanded="false" aria-controls="nav">Menu</button>
+</header>
+
+<div class="search" id="search" role="dialog" aria-modal="true" aria-label="Search" hidden>
+  <button class="x" id="sx" aria-label="Close search">Close ✕</button>
+  <label class="meta" for="sq">Where to next?</label>
+  <input id="sq" type="search" placeholder="Kyoto, beaches, silence…" autocomplete="off">
+  <ul id="sres"></ul>
+</div>
+
+<main>
+<section class="hero" id="top">
+  <div class="h-img main"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=70" alt="Mountain valley at sunrise" fetchpriority="high" onerror="this.remove()"></div>
+  <!-- <div class="h-img inset" data-p=".12"><img src="https://images.unsplash.com/photo-1473773508845-188df298d2d1?auto=format&fit=crop&w=700&q=70" alt="Open road through the countryside" onerror="this.remove()"></div> -->
+  <h1 class="disp"><span class="ln"><i>The world</i></span><span class="ln"><i>is <em class="ser">wide</em></i></span><span class="ln"><i>open.</i></span></h1>
+  <span class="tag t1 meta">Amalfi ↗</span><span class="tag t2 meta">Kyoto ↗</span><span class="tag t3 meta">Patagonia ↗</span>
+  <p class="coords meta" id="coords" aria-hidden="true"></p>
+  <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="c" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><circle cx="60" cy="60" r="57" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="3 4"/><text font-size="11" letter-spacing="3" fill="currentColor"><textPath href="#c">WANDERWILD · EST. 2026 · PASSPORT ·</textPath></text><text x="60" y="70" text-anchor="middle" font-size="28" fill="currentColor">✈</text></svg>
+  <div class="hero-foot"><p class="lede">An independent travel magazine for people who’d rather get lost than get a package.</p><a class="btn" href="#destinations" data-mag>Start wandering <span>→</span></a></div>
+</section>
+
+<section id="destinations">
+  <p class="meta rv">Destinations we love</p>
+  <h2 class="disp big rv">Six places that<br><em class="ser">changed our maps</em></h2>
+  <div class="filters rv" data-for="dgrid" role="group" aria-label="Filter destinations"><button class="on" data-f="all">All</button><button data-f="coast">Coast</button><button data-f="culture">Culture</button><button data-f="nature">Nature</button><button data-f="adventure">Adventure</button></div>
+  <div class="dgrid" id="dgrid"></div>
+</section>
+
+<section id="stories">
+  <p class="meta rv">The travel stories</p>
+  <h2 class="disp big rv">Read <em class="ser">slowly.</em><br>Leave soon.</h2>
+  <div class="filters rv" data-for="slist" role="group" aria-label="Filter stories"><button class="on" data-f="all">All</button><button data-f="city">City</button><button data-f="coast">Coast</button><button data-f="mountains">Mountains</button></div>
+  <div class="slist" id="slist"></div>
+</section>
+
+<section class="lens" id="lens">
+  <p class="meta rv">The world through our lens</p>
+  <h2 class="disp big rv">Light, <em class="ser">collected.</em></h2>
+  <div class="gctl"><button id="gprev" aria-label="Scroll gallery left">←</button><button id="gnext" aria-label="Scroll gallery right">→</button></div>
+  <div class="rail" id="rail" tabindex="0" aria-label="Photo gallery, scroll horizontally"></div>
+</section>
+
+<section class="mood" id="mood">
+  <p class="meta rv">Travel by mood</p>
+  <h2 class="disp big rv">How do you <em class="ser">want to feel?</em></h2>
+  <div class="moods" id="moods"></div>
+</section>
+
+<section class="feat" id="journal">
+  <div class="feat-img" data-p="-.08"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1800&q=70" alt="Alpine lake at dawn" loading="lazy" onerror="this.remove()"></div>
+  <p class="meta rv">Featured journal · Issue 07</p>
+  <h2 class="disp rv" aria-label="Silence at altitude">Si<span>len</span>ce</h2>
+  <div class="feat-body rv"><p class="ser">Seven days above the treeline, no signal, one notebook. What the mountains asked of us — and what we left there.</p>
+  <button class="btn" id="fbtn" data-mag aria-expanded="false" aria-controls="chap">Explore the journal <span>+</span></button>
+  <ol class="chap" id="chap" hidden><li><b>Day 1–2</b> The long walk in</li><li><b>Day 3</b> A lake with no name</li><li><b>Day 4–5</b> Weather, and waiting</li><li><b>Day 6–7</b> The quiet coming down</li></ol></div>
+</section>
+
+<section id="photos">
+  <p class="meta rv">Photo journal</p>
+  <h2 class="disp big rv">Small <em class="ser">frames,</em> big days</h2>
+  <div class="pgrid" id="pgrid"></div>
+</section>
+
+<section class="news" id="newsletter">
+  <h2 class="disp rv">Your passport<br>is <em class="ser">waiting</em></h2>
+  <form id="nform" novalidate class="rv">
+    <p class="ser">One letter a month: a place, a photograph, a reason to go.</p>
+    <div class="fld"><label for="nn">First name</label><input id="nn" name="name" autocomplete="given-name" aria-describedby="ne"></div>
+    <div class="fld"><label for="ne">Email</label><input id="ne" name="email" type="email" autocomplete="email" aria-describedby="nm"></div>
+    <button class="btn alt" type="submit" data-mag>Stamp my passport <span>→</span></button>
+    <p class="msg" id="nm" role="status"></p>
+  </form>
+</section>
+</main>
+
+<footer>
+  <div class="mq" aria-hidden="true"><div><span>Keep wandering ✦ Stay curious ✦ Get lost well ✦ Keep wandering ✦ Stay curious ✦ Get lost well ✦ </span><span>Keep wandering ✦ Stay curious ✦ Get lost well ✦ Keep wandering ✦ Stay curious ✦ Get lost well ✦ </span></div></div>
+  <div class="fgrid"><nav aria-label="Footer"><a href="#destinations">Destinations</a><a href="#stories">Stories</a><a href="#lens">Lens</a></nav>
+  <nav aria-label="Social"><a href="#top">Instagram</a><a href="#top">YouTube</a><a href="#top">Pinterest</a><a href="#top">Substack</a></nav>
+  <p class="meta">© 2026 Wanderwild. Made for the curious.</p></div>
+  <p class="giant disp" aria-hidden="true">Wanderwild</p>
+  <svg class="plane" viewBox="0 0 400 60" aria-hidden="true"><path d="M0 50Q100 0 200 30T400 10" fill="none" stroke="currentColor" stroke-dasharray="4 6" stroke-width="2"/><text class="pl" font-size="24">✈</text></svg>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
