@@ -33,7 +33,7 @@ Wanderwild is a polished, single-page frontend concept designed for travel blogs
 ## Live demo
 
 - **Live demo (GitHub Pages):** https://mrpranavpatel.github.io/Wanderwild/
-- **Vercel:** Coming soon. The deployment URL will be added later.
+- **Vercel (live):** https://wanderwild-template.vercel.app/
 
 ## Deployment
 
