@@ -4,7 +4,7 @@
 
 <div align="center">
 
-[![Wanderwild website preview](https://image.thum.io/get/noanimate/width/1200/crop/850/maxAge/72/https://wanderwild-template.vercel.app/)](https://wanderwild-template.vercel.app/)
+[![Wanderwild website preview](./wanderwild-preview.png)](https://wanderwild-template.vercel.app/)
 
 **Travel magazine & journal**
 
@@ -14,7 +14,7 @@
 
 </div>
 
-*Preview is generated from the public Vercel website using Thum.io and may take a moment to appear or reflect recent changes.*
+*Preview screenshot of the website homepage.*
 
 <!-- README SHOWCASE END -->
 
